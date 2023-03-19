@@ -13,18 +13,11 @@ public class Sivakrishna_Day18 {
 	int d3 = (d1*d2);
 	// simplification
 	int max_divisor=0;
-	if(n3 > d3) {
-	for(int i=1;i<=d3;i++) {
-	if(n3%i == 0 && d3%i ==0) {
-	max_divisor = Math.max(max_divisor,i);
-	    }
-	} 
-     }   else {
-	for(int i=1;i<=n3;i++) {
-	if(d3%i ==0 && n3%i ==0) {
-	max_divisor = Math.max(max_divisor,i);
-	    }
-    }
+    int min = Math.min(n3,d3);
+	for(int i=1;i<=min;i++) {
+        if(n3%i ==0 && d3%i ==0){
+            max_divisor = Math.max(max_divisor,i);
+        }
     }
 	// Printing the fraction
 	int numerator = n3/max_divisor;
