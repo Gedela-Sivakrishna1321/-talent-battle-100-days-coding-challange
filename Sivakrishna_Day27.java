@@ -4,11 +4,7 @@ public class Sivakrishna_Day27 {
 	Scanner sc = new Scanner(System.in);
 	System.out.print("Input = ");
 	int num = sc.nextInt();
-    int temp=num;
-    for(int i=1;i<=temp;i++) {
-        num++;
-    }
-	System.out.println((num));
+	System.out.println((num<<1));
 	sc.close();
 	}
 }
