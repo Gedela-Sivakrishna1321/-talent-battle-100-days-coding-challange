@@ -6,7 +6,7 @@ public class Sivakrishna_Day35 {
         String str = sc.next();
         int sum=0;
         for(int i=0;i<str.length();i++) {
-            if(Character.isDigit(str.charAt(i)) == true) {
+            if(Character.isDigit(str.charAt(i))) {
                 sum += Character.getNumericValue(str.charAt(i));;
             }
         }
