@@ -12,5 +12,6 @@ public class Sivakrishna_Day46 {
             sum += arr[i];
         }
         System.out.println("Sum of all elements = "+sum);
+        sc.close();
     }    
 }
