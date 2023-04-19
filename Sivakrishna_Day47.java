@@ -4,43 +4,32 @@ public class Sivakrishna_Day47 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the size : ");
         int size = sc.nextInt();
-        int arr[][] = new int[size][size];
+        int arr[] = new int[size];
         System.out.print("Enter the elements : ");
+        int max_len = Integer.MIN_VALUE;
+        int result=0;
         for(int i=0;i<arr.length;i++) {
-            arr[i][0] = sc.nextInt();
+            arr[i] = sc.nextInt();
+            int len = Integer.valueOf(String.valueOf(arr[i]));
+            if(ispalin(arr[i]) && len > max_len ) {
+                max_len = Math.max(len,max_len);
+                result = arr[i];
+            }
         }
-        if(largestPalin(arr) != -1) {
-            System.out.println(largestPalin(arr));
-        } else {
-            System.out.println("No palindrome Numbers ");
-        }
+        System.out.println(result);
         sc.close();
     }
 
-    static int largestPalin(int arr[][]) {
-        int max_len = Integer.MIN_VALUE;
-        for(int i=0;i<arr.length;i++) {
-            char curr[] = String.valueOf(arr[i][0]).toCharArray();
-            boolean ispalin = true;
-            for(int j=0;j<curr.length;j++) {
-                if(curr[j] != curr[curr.length-1-j]) {
-                    ispalin = false;
-                    break;
-                }
-            }
-            // If number is palin then store it's size
-            if(ispalin) {
-                arr[i][1] = curr.length;
-                max_len = Math.max(arr[i][1],max_len);
+    static boolean ispalin(int num) {
+        char ch[] = String.valueOf(num).toCharArray();
+        for(int i=0;i<ch.length;i++) {
+            if(ch[i] != ch[ch.length-1-i]) {
+                return false;
             }
         }
-        // Now find the maximm length of the palin and return it
-        for(int k=0;k<arr.length;k++) {
-            if(arr[k][1] == max_len) {
-                return arr[k][0];
-            }
-        }
-        return -1;
+        return true;
     }
 
-}
+  }
+
+
