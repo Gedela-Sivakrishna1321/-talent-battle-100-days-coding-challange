@@ -11,21 +11,9 @@ class Codechef
 	{
 		// your code goes here
 		Scanner sc = new Scanner(System.in);
-		int t = sc.nextInt();
-		while(t-- >0) {
-		    int N = sc.nextInt();
-		    boolean Isprime = true;
-		    if(N == 1) {
-		        System.out.println("No");
-		        continue;
-		    }
-		    for(int i=2;i<=Math.sqrt(N);i++) {
-		        if(N%i == 0) {
-		            Isprime = false;
-		            break;
-		        }
-		    }
-		    System.out.println(Isprime ? "Yes" : "No");
-		}
+		int num1 = sc.nextInt();
+		sc.nextLine();
+		int num2 = sc.nextInt();
+		System.out.println(num1+num2); 
 	}
 }
