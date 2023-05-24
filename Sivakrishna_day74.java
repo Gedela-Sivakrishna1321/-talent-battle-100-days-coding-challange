@@ -14,6 +14,6 @@ public class Sivakrishna_day74 {
             System.out.println(TotalArea - (No_Of_cells*4));
         }
     }      
-    sc.close();  
+    sc.close();
     }
 }
