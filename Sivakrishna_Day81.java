@@ -8,7 +8,7 @@ public class Sivakrishna_Day81 {
             int N = sc.nextInt();
             String str = sc.next();
             int count=0;
-            for(int i=0;i<str.length()-1;i++) {
+            for(int i=0;i<N-1;i++) {
                 if(str.charAt(i)=='1')
                     count++;
             }
